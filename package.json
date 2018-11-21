@@ -5,7 +5,7 @@
   "repository": "https://github.com/FibreOptics/express_okki.git",
   "scripts": {
     "start": "node server.js",
-    "heroku-postbuild": "yarn install --only=dev && yarn install && yarn run build"
+    "heroku-postbuild": "yarn install --only=dev && yarn start"
   },
   "dependencies": {
     "express": "^4.16.4"
