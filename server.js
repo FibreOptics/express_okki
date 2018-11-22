@@ -1,7 +1,5 @@
 const express = require('express');
-
 const path = require('path');
-
 const app = express();
 
 // Serve the static files from the React app
@@ -24,8 +22,8 @@ app.get('/api/testitem', (req,res) => {
             pass:"bravo"
         },
     ]
-    res.json(list);
-    res.json(jsample);
+    res.json(list,jsample);
+    //res.json(jsample);
     console.log('Sent list of items');
 });
 
