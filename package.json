@@ -1,4 +1,4 @@
-{ 
+{
   "name": "express_okki",
   "version": "1.0.0",
   "main": "server.js",
@@ -8,6 +8,7 @@
     "heroku-postbuild": "yarn install --only=dev && yarn start"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4"
   }
 }

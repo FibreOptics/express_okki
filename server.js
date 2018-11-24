@@ -7,7 +7,7 @@ app.use(express.static(path.join(__dirname, 'react_okki/public')));
 
 // An api endpoint that returns a short list of items
 app.get('/api/testitem', (req,res) => {
-    var list = ["item1", "item2", "item3"];
+    const list = ["item1", "item2", "item3"];
     const jsample = [
         {
             id:0,
@@ -22,7 +22,7 @@ app.get('/api/testitem', (req,res) => {
             pass:"bravo"
         },
     ]
-    res.json(list,jsample);
+    res.json(list);
     //res.json(jsample);
     console.log('Sent list of items');
 });
