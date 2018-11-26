@@ -3,23 +3,12 @@ const path = require('path');
 const app = express();
 const cors = require('cors');
 
-const whitelist = ['http://reactokki.herokuapp.com']
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  }
-}
-
 app.use(cors());
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'react_okki/public')));
 
 // An api endpoint that returns a short list of items
-app.get('/api/testitem',cors(corsOptions), (req,res) => {
+app.get('/api/testitem',cors(), (req,res) => {
     const list = ["item1", "item2", "item3"];
     const jsample = [
         {
