@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'react_okki/public')));
 
 // An api endpoint that returns a short list of items
 app.get('/api/testitem',(req,res) => {
-    const list = ["item1", "item2", "item3"];
+    const list = ["item1", "item2", "item3","cors"];
     const jsample = [
         {
             id:0,
