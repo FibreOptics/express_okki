@@ -4,11 +4,16 @@ const app = express();
 const cors = require('cors');
 
 app.use(cors());
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'react_okki/public')));
 
 // An api endpoint that returns a short list of items
-app.get('/api/testitem',cors(), (req,res) => {
+app.get('/api/testitem',(req,res) => {
     const list = ["item1", "item2", "item3"];
     const jsample = [
         {
